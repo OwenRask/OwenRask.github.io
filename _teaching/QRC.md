@@ -1,9 +1,9 @@
 ---
 title: "Quantitative Research Center Tutor"
 collection: teaching
-type: "Undergraduate course"
+type: "Undergraduate TA"
 permalink: /teaching/QRC
-venue: "University 1, Department"
+venue: "Colorado College, Quantitative Reasoning Center"
 date: 2014-01-01
 location: "City, Country"
 ---
