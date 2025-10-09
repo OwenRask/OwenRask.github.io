@@ -40,10 +40,30 @@
 
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-          {% unless post.category == "workingpapers" or post.venue == nil or post.venue == "" %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-          {% endunless %}
+    
+    # {% elsif post.collection == 'publications' %}
+    #{% unless post.category == "workingpapers" or post.venue == nil or post.venue == "" %}
+    #<p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+    # {% endunless %}
+
+            {% elsif post.collection == 'publications' %}
+            {% assign v = post.venue | to_s | strip %}
+            {% assign cats = post.categories | default: post.category %}
+            {% assign is_wp = false %}
+      
+        {%- if cats -%}
+          {%- if cats contains "workingpapers" or cats == "workingpapers" -%}
+            {% assign is_wp = true %}
+          {%- endif -%}
+        {%- endif -%}
+        {%- if v == "" or v == nil or v | downcase == "working paper" or v | downcase == "working papers" -%}
+          {% assign is_wp = true %}
+        {%- endif -%}
+
+        {% unless is_wp %}
+          <p>Published in <i>{{ post.venue }}</i>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+        {% endunless %}
+
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
