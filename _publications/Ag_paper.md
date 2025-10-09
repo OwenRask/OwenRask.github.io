@@ -7,7 +7,7 @@ excerpt: 'The U.S. Conservation Reserve Program (CRP) is often framed as a conse
 date: 2024-05-01
 venue: ''
 slidesurl: ''
-paperurl: ''
+paperurl: 'http://owenrask.github.io/files/Ag_paper.pdf'
 bibtexurl: ''
 citation: ''
 ---
