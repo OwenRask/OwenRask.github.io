@@ -7,7 +7,7 @@ excerpt: 'This paper analyzes multigenerational trends in U.S. socioeconomic mob
 date: 2024-05-01
 venue: ''
 slidesurl: ''
-paperurl: ''
+paperurl: 'http://owenrask.github.io/files/women_role_models.pdf'
 citation: ''
 ---
 
