@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate TA"
 permalink: /teaching/QRC
 venue: "Colorado College, Quantitative Reasoning Center"
-date: 2014-01-01
+date: 2022-04-01 to 2024-05-01
 location: "City, Country"
 ---
 
