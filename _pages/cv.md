@@ -8,3 +8,5 @@ redirect_from:
 ---
 
 {% include base_path %}
+
+[📄 Download my CV (PDF)]([/files/Owen_Rask_CV.pdf](http://owenrask.github.io/files/Grad_School_CV.pdf))
