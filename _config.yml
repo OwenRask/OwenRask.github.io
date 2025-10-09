@@ -137,7 +137,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -234,7 +234,7 @@ collections:
     permalink: /:collection/:path/
   news: 
     output: true
-    permalink /:collection/:path/
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
