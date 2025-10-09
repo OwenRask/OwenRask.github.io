@@ -36,8 +36,30 @@ layout: default
         
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        
+          # {% elsif page.venue and page.date %}
+          # <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+
+            {% if page.collection == 'publications' %}
+            {% assign v = page.venue | to_s | strip %}
+            {% assign cats = page.categories | default: page.category %}
+            {% assign is_wp = false %}
+          
+            {%- if cats -%}
+              {%- if cats contains "workingpapers" or cats == "workingpapers" -%}
+                {% assign is_wp = true %}
+              {%- endif -%}
+            {%- endif -%}
+            {%- if v == "" or v == nil or v | downcase == "working paper" or v | downcase == "working papers" -%}
+              {% assign is_wp = true %}
+            {%- endif -%}
+          
+            {% unless is_wp %}
+              <p>Published in <i>{{ page.venue }}</i>{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}</p>
+            {% endunless %}
+          {% endif %}
+        
+          
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
