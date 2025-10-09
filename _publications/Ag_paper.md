@@ -1,10 +1,10 @@
 ---
-title: "Paper Title Number 1"
+title: "Don't Put All Your Acres in One Basket: Heterogeneous Risk Preferences in CRP Participation"
 collection: publications
 category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
+permalink: /publication/Ag_paper
+excerpt: 'The U.S. Conservation Reserve Program (CRP) is often framed as a conservation initiative, yet it also functions as one of the largest agricultural transfer programs, paying farmers annual rents to retire land from production. Despite the program’s scale, little is known about how farmers weigh this tradeoff or how risk preferences shape their decisions. This paper develops a dynamic land-allocation model to study that decision.'
+date: 2024-05-01
 venue: 'Journal 1'
 slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
