@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_pic.jpg"
+  avatar           : "profile_pic.jpeg"
   name             : "Owen Rask"
   pronouns         : # example: "she/her"  
   bio              : "Economics Pre-Doctoral Fellow"
