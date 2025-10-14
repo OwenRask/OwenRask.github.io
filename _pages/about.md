@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an aspiring PhD candidate in economics with research interests in applied microeconomics, agriculture, and policy design. My work combines structural modeling, quasi-experimental methods, large-scale administrative data, and program evaluation to understand how individuals and firms heterogeneously respond to incentives and constraints.
+I am Predoctoral Fellow at the [Tobin Center for Economic Policy](https://tobin.yale.edu/people/owen-rask) at Yale University. My primary research interests in applied microeconomics, agriculture, and policy design. My work combines structural modeling, quasi-experimental methods, large-scale administrative data, and program evaluation to understand how individuals and firms heterogeneously respond to incentives and constraints.
 
 My recent projects span topics such as dynamic models of farmers’ land-allocation decisions under the U.S. Conservation Reserve Program, and the role of mother role models in shaping their daughters intergenerational mobility. Across these areas, I emphasize careful empirical design, the use of administrative and survey microdata, and structural modeling to better understand behavior.
 
