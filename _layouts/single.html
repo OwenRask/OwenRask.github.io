@@ -56,16 +56,16 @@ layout: default
             {% endunless %}
           {% endif %}
 
-        {% if page.paperurl or page.pdf %}
-          <p>
-          <a class="btn" href="{{ page.paperurl | default: page.pdf | relative_url }}"
-           target="_blank" rel="noopener">
-           Download PDF
-          </a>
-          </p>
+            {% if page.paperurl or page.pdf %}
+            <p>
+              <a class="btn btn--primary"
+                 href="{{ page.paperurl | default: page.pdf | relative_url }}"
+                 target="_blank" rel="noopener">
+                Download PDF
+              </a>
+            </p>
           {% endif %}
-        
-          
+
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
