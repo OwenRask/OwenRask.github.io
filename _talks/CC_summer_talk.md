@@ -8,4 +8,4 @@ date: 2023-09-26
 location: "Colorado Springs, CO, USA"
 ---
 
-This is a description of your talk, which is a markdown file that can be all markdown-ified like any other post. Yay markdown!
+Presented research findings at Colorado College’s annual Summer Research and Internship Symposium. The project was conducted during my Junior Year Summer RA position at the College's Mathematics and Computer Science Department. The project investigated the influence of location, race, and gender on U.S. women’s intergenerational socioeconomic mobility.
