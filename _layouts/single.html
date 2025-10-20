@@ -55,6 +55,15 @@ layout: default
               <p>Published in <i>{{ page.venue }}</i>{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}</p>
             {% endunless %}
           {% endif %}
+
+        {% if page.paperurl or page.pdf %}
+          <p>
+          <a class="btn" href="{{ page.paperurl | default: page.pdf | relative_url }}"
+           target="_blank" rel="noopener">
+           Download PDF
+          </a>
+          </p>
+          {% endif %}
         
           
         {% elsif page.date %}
