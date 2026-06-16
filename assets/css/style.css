@@ -8,6 +8,8 @@
     --text-light: #6B5E4A;
     --gold: #B8860B;
     --gold-hover: #8B6010;
+    --blue: #003262;        /* Berkeley Blue */
+    --blue-accent: #3B7EA1; /* Founder's Rock */
     --green: #2D4A2D;
     --border: #E4D9C5;
     --card-bg: #FFFFFF;
@@ -76,11 +78,11 @@ body::before {
 img { max-width: 100%; display: block; }
 
 a {
-    color: var(--gold-hover);
+    color: var(--blue);
     text-decoration: none;
     transition: color 0.2s ease;
 }
-a:hover { color: var(--gold); }
+a:hover { color: var(--blue-accent); }
 
 /* ============================================================
    NAVIGATION
@@ -210,9 +212,8 @@ a:hover { color: var(--gold); }
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: calc(var(--nav-height) + 3rem) 2rem 5rem;
+    padding: calc(var(--nav-height) + 4rem) 2rem 4rem;
     overflow: hidden;
     background-color: var(--bg);
 }
@@ -234,6 +235,115 @@ a:hover { color: var(--gold); }
     z-index: 1;
     text-align: center;
     max-width: 720px;
+}
+
+/* ---- Combined intro (hero + about) ---- */
+.intro-grid {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    align-items: start;
+    text-align: left;
+}
+
+.intro-left {
+    text-align: left;
+}
+
+.intro-left .hero-label {
+    margin-bottom: 0.9rem;
+}
+
+.intro-left .hero-name {
+    font-size: clamp(2.75rem, 6vw, 4.25rem);
+    margin-bottom: 0.75rem;
+}
+
+.intro-left .hero-affiliation {
+    margin-bottom: 0.4rem;
+}
+
+.hero-fields {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+}
+
+.hero-fields li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 0.22rem 0 0.22rem 0.75rem;
+    border-left: 2px solid var(--gold);
+    margin-bottom: 0.3rem;
+}
+
+.nowrap { white-space: nowrap; }
+
+.hero-fields li:last-child {
+    margin-bottom: 0;
+}
+
+.intro-photo {
+    max-width: 260px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.7s;
+}
+
+.intro-photo img {
+    width: 100%;
+    border-radius: 4px;
+    border: 3px solid var(--gold);
+    box-shadow: 0 8px 30px var(--shadow);
+    transition: box-shadow 0.3s ease;
+}
+.intro-photo img:hover {
+    box-shadow: 0 12px 40px var(--shadow-hover);
+}
+
+.intro-right {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.55s;
+}
+
+.intro-right h2 {
+    margin-bottom: 1.5rem;
+}
+
+.intro-actions {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.85s;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.intro-actions .hero-socials {
+    margin-left: auto;
+    opacity: 1;
+    animation: none;
 }
 
 .hero-label {
@@ -463,13 +573,13 @@ h2 {
 }
 
 .about-text a {
-    color: var(--gold-hover);
-    border-bottom: 1px solid rgba(139, 96, 16, 0.3);
+    color: var(--blue);
+    border-bottom: 1px solid rgba(0, 50, 98, 0.3);
     transition: border-color 0.2s ease, color 0.2s ease;
 }
 .about-text a:hover {
-    border-bottom-color: var(--gold);
-    color: var(--gold);
+    border-bottom-color: var(--blue-accent);
+    color: var(--blue-accent);
 }
 
 /* ============================================================
@@ -483,7 +593,7 @@ h2 {
 
 .paper-card {
     background: var(--card-bg);
-    border-left: 4px solid var(--gold);
+    border-left: 4px solid var(--blue);
     border-radius: 0 6px 6px 0;
     padding: 1.75rem 2rem;
     box-shadow: 0 2px 14px var(--shadow);
@@ -698,10 +808,10 @@ h2 {
 }
 
 .contact-link:hover {
-    border-color: var(--gold-hover);
-    color: var(--gold-hover);
+    border-color: var(--blue);
+    color: var(--blue);
     transform: translateX(5px);
-    background: rgba(139, 96, 16, 0.04);
+    background: rgba(0, 50, 98, 0.04);
 }
 
 /* ============================================================
@@ -799,9 +909,21 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .hero-actions {
-        flex-direction: column;
-        align-items: center;
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2.25rem;
+    }
+
+    .intro-photo {
+        max-width: 220px;
+    }
+
+    .intro-actions {
+        gap: 1.25rem;
+    }
+
+    .intro-actions .hero-socials {
+        margin-left: 0;
     }
 
     .section { padding: 4.5rem 1.5rem; }
